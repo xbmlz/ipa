@@ -7,7 +7,7 @@ import (
 
 type Context struct {
 	// gin context
-	GinContext *gin.Context
+	*gin.Context
 	// logger
-	Logger logger.Logger
+	Log logger.Logger
 }

@@ -89,8 +89,8 @@ func (a *App) addRoute(method, path string, handler HandlerFunc) {
 	a.httpRegistered = true
 	a.httpServer.router.Handle(method, path, func(c *gin.Context) {
 		ctx := &Context{
-			GinContext: c,
-			Logger:     logger.New("INFO"),
+			Context: c,
+			Log:     logger.New("INFO"),
 		}
 		handler(ctx)
 	})
